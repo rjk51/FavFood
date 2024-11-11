@@ -11,6 +11,7 @@ struct FoodPlace {
     let address: String
     let category: String
     let image: UIImage
+    
 }
 
 let foodPlaces: [FoodPlace] = [

@@ -15,7 +15,6 @@ class FoodTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         foodImageView.layer.cornerRadius = 20
         foodImageView.clipsToBounds = true
     }
@@ -23,7 +22,6 @@ class FoodTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }

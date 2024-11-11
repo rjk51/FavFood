@@ -11,19 +11,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    // Array to hold filtered search results
     var filteredFoodPlaces: [FoodPlace] = []
     var isSearching = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set up table view and search bar
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
         
-        // Set up search bar
         searchBar.delegate = self
     }
 
@@ -85,12 +82,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        // Reset search and reload original data
+
         isSearching = false
         searchBar.text = ""
         filteredFoodPlaces.removeAll()
         tableView.reloadData()
-        searchBar.resignFirstResponder()  // Dismiss the keyboard
+        searchBar.resignFirstResponder()
     }
 
 }
